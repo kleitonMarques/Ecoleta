@@ -1,5 +1,5 @@
 Start Back-End =>
-    npm start
+    npm run dev
     open in "http://localhost:3333/"
 
 Start Front-End =>
