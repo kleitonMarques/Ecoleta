@@ -1,12 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './Header'
 
 function App() {
+  const [counter, setCounter] = useState(0)
+
+  function handButtonClick() {
+    setCounter(counter + 1)
+  }
+
   return (
     <div>
-      <Header title="Hello Word" />
-      <h1>Conteudo da aplicação</h1>
+      <Header title={`Contador ${counter}`} />
+      <h1>{counter}</h1>
+      <button type="button" onClick={handButtonClick}>Aumentar</button>
     </div>
   );
 }
